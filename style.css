@@ -1,0 +1,128 @@
+/* 1. Body structure setup for a sticky footer */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #fafafa;
+    color: #222;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 2. Header Styles */
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #eaeaea;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+/* 3. Layout Container */
+.container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 0 20px;
+    flex: 1 0 auto; 
+}
+
+/* 4. Content Elements */
+.blog-post {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    margin-bottom: 30px;
+}
+
+.blog-post h2 {
+    margin-top: 0;
+    color: #111;
+}
+
+.blog-post h3 {
+    margin-top: 30px;
+    color: #333;
+}
+
+.post-meta {
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+/* Styling technical code snippets inside text */
+code {
+    background-color: #f4f4f9;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.95rem;
+    color: #d63384;
+}
+
+/* Ordered list adjustments inside the article */
+.blog-post ol {
+    padding-left: 20px;
+    margin: 20px 0;
+}
+
+.blog-post li {
+    margin-bottom: 10px;
+}
+
+/* About Me section with Flexbox */
+.about-me {
+    background: #f0f0f5;
+    padding: 25px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+}
+
+.about-text h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.about-text p {
+    margin: 0;
+}
+
+/* 5. Sticky Footer Elements */
+footer {
+    flex-shrink: 0;
+    background-color: #fff;
+    border-top: 1px solid #eaeaea;
+    text-align: center;
+    padding: 20px;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 480px) {
+    .about-me {
+        flex-direction: column;
+        text-align: center;
+    }
+}
